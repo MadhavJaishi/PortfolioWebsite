@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --text: 0 0 0;
+  --card: 245 245 245;
+  --text: 0 0 0;
+}
+
+.dark {
+--background: 24 24 27;
+  --text: 255 255 255;
+  --card: 39 39 42;
+  --text: 255 255 255;
+}
