@@ -2,7 +2,9 @@ import { createContext, useState } from 'react'
 
 const DarkModeContext = createContext();
 const DarkModeProvider = (props) => {
-  const [darkMode, setDark] = useState(false)
+  const [darkMode, setDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
   const toggleTheme = () => {
     setDark(prev => !prev);
   }

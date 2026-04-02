@@ -6,7 +6,9 @@ const NavBar = () => {
   const { darkMode, toggleTheme } = useContext(DarkModeContext);
 
   useEffect(() => {
-    // Toggle the `dark` class based on the darkMode state
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+
+    // optional: apply class to html for Tailwind
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
