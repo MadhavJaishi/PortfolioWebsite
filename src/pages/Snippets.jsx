@@ -1,43 +1,9 @@
 import { useState } from "react";
 import { FaCopy, FaCheck } from "react-icons/fa";
+import { snippetsList } from "../portfolioData";
 
 const Snippets = () => {
   const [copiedId, setCopiedId] = useState(null);
-
-  const snippetsList = [
-    {
-      id: "use-media-query",
-      title: "useMediaQuery React Hook",
-      description: "A lightweight custom hook to subscribe to CSS media queries dynamically.",
-      language: "JavaScript",
-      code: `const useMediaQuery = (query) => {
-  const [matches, setMatches] = useState(false);
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) setMatches(media.matches);
-    const listener = () => setMatches(media.matches);
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, [matches, query]);
-  return matches;
-};`,
-    },
-    {
-      id: "tailwind-scroll",
-      title: "Tailwind Scroll Hide Utility",
-      description: "CSS base class custom utility to conceal scrollbars across major rendering engines.",
-      language: "CSS",
-      code: `/* Hide scrollbar for Chrome, Safari and Opera */
-.scroll-hidden::-webkit-scrollbar {
-  display: none;
-}
-/* Hide scrollbar for IE, Edge and Firefox */
-.scroll-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}`,
-    }
-  ];
 
   const handleCopy = (id, code) => {
     navigator.clipboard.writeText(code);

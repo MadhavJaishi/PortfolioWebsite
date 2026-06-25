@@ -1,28 +1,6 @@
-const Blogs = () => {
-  const blogsList = [
-    {
-      title: "Building Scalable Training Management Systems",
-      date: "June 15, 2026",
-      readTime: "8 min read",
-      category: "Architecture",
-      summary: "Insights and lessons learned from developing custom enterprise training portals (TMS) servicing thousands of active candidates, with structural optimization techniques.",
-    },
-    {
-      title: "TailwindCSS Tricks for Sleek Minimalist Portfolios",
-      date: "May 28, 2026",
-      readTime: "5 min read",
-      category: "CSS",
-      summary: "How to use native system color schemes, CSS custom properties, dynamic transparency levels, and backdrop blur to craft polished, Apple-level portfolio sites.",
-    },
-    {
-      title: "A Deep Dive into React State Management in 2026",
-      date: "April 10, 2026",
-      readTime: "12 min read",
-      category: "React",
-      summary: "Analyzing modern state containers, context optimizations, server-side data synchronization strategies, and choosing the lightest, simplest approach for your project.",
-    }
-  ];
+import { blogsList } from "../portfolioData";
 
+const Blogs = () => {
   return (
     <div className="p-4 sm:p-6 space-y-8 animate-fade-in">
       <div className="space-y-2">
